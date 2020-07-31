@@ -3,5 +3,5 @@
 .gradle
 .idea
 application-oauth.properties
-build/
-out/production/classes/
+build
+out
