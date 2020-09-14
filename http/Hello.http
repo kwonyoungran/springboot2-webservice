@@ -1,0 +1,39 @@
+#1. GET TEST
+#GET https://www.devbeginner.com
+
+#2. POST TEST
+#POST http://localhost:8080/test/group
+#Content-Type: application/json
+#
+#{
+#  "groupName": "그룹명",
+#  "members": [
+#    "회원1",
+#    "회원2",
+#    "회원3"
+#  ],
+#  "date": {
+#    "year": 2018,
+#    "month": 1,
+#    "day": 24
+#  }
+#}
+
+#3. file 전송 TEST
+#POST http://localhost:8080/test/group
+#Content-Type: application/json
+#
+#< ./post.json
+
+### 4.Request Header TEST
+#### 개발
+#GET http://localhost:8080/test/dev/hello
+#Authorization: DEV
+#### 운영
+#GET http://localhost:8080/test/real/hello
+#Authorization: PRODUCTION
+
+### 5.cookie TEST
+GET http://localhost:8080/test/cookie
+Cookie: user=ran
+
