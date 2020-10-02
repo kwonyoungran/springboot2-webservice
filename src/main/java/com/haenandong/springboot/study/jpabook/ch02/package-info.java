@@ -1,0 +1,1 @@
+package com.haenandong.springboot.study.jpabook.ch02;
