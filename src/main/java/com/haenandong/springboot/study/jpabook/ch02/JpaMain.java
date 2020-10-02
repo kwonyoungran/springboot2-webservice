@@ -35,7 +35,7 @@ public class JpaMain {
 
     public static void logic(EntityManager em) {
 
-        String id = "id4";
+        String id = "id5";
         Member member = new Member();
         member.setId(id);
         member.setUsername("지한");

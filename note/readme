@@ -1,11 +1,12 @@
 h2 Database info
 1. springboot2-webservice
-http://localhost:8080/h2-console/
+Url: http://localhost:8080/h2-console/
 Driver Class: org.h2.Driver
 JDBC URL: jdbc:h2:mem:testdb
 User Name: sa
 Password:
 2. jpabook
+Url: http://localhost:8082
 Driver Class: org.h2.Driver
 JDBC URL: jdbc:h2:tcp://localhost/~/test"
 User Name: sa
