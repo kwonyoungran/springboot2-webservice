@@ -8,7 +8,7 @@ Password:
 2. jpabook
 Url: http://localhost:8082
 Driver Class: org.h2.Driver
-JDBC URL: jdbc:h2:tcp://localhost/~/test"
+JDBC URL: jdbc:h2:tcp://localhost/~/test
 User Name: sa
 Password:
 

@@ -18,7 +18,6 @@ public class JpaMain {
 
         try {
 
-
             tx.begin(); //트랜잭션 시작
             logic(em);  //비즈니스 로직
             tx.commit();//트랜잭션 커밋
@@ -52,6 +51,7 @@ public class JpaMain {
         System.out.println("findMember=" + findMember.getUsername() + ", age=" + findMember.getAge());
 
         //목록 조회
+        //JPQL(Java Persistence Query Language): 엔티티객체를 대상으로 쿼리
         List<Member> members = em.createQuery("select m from Member m", Member.class).getResultList();
         System.out.println("members.size=" + members.size());
 
