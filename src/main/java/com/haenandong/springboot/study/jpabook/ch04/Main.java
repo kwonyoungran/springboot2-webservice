@@ -1,14 +1,12 @@
 package com.haenandong.springboot.study.jpabook.ch04;
 
-import com.haenandong.springboot.study.jpabook.ch04.entity.Item;
-import com.haenandong.springboot.study.jpabook.ch04.entity.Member;
-import com.haenandong.springboot.study.jpabook.ch04.entity.Order;
-import com.haenandong.springboot.study.jpabook.ch04.entity.OrderItem;
+import com.haenandong.springboot.study.jpabook.ch04.entity.*;
 
 import javax.persistence.EntityManager;
 import javax.persistence.EntityManagerFactory;
 import javax.persistence.EntityTransaction;
 import javax.persistence.Persistence;
+import java.util.Date;
 import java.util.List;
 
 /**
@@ -42,16 +40,45 @@ public class Main {
     }
 
     public static void logic(EntityManager em) {
+//        Member member = new Member();
+//        member.setId(2L);
+//        member.setName("2번");
+//        member.setCity("서울");
+//        member.setStreet("서울길");
+//        member.setZipcode("12345");
+//        em.persist(member);
+//
+//        Item item = new Item();
+//        item.setId(2L);
+//        item.setName("마우스");
+//        item.setPrice(3000);
+//        item.setStockQuantity(100);
+//        em.persist(item);
+//
+//        OrderItem orderItem = new OrderItem();
+//        orderItem.setId(2L);
+//        orderItem.setCount(2);
+//        orderItem.setOrderPrice(6000);
+//        orderItem.setItem(item);
+//        em.persist(orderItem);
+//
+//        Order order = new Order();
+//        order.setId(2L);
+//        order.setOrderDate(new Date());
+//        order.setMember(member);
+//        order.setStatus(OrderStatus.ORDER);
+//        em.persist(order);
 
+        //조회
         Long orderID = 1L;
-        Order order = em.find(Order.class, orderID);
-        Member member = order.getMember();  //주문한 회원, 참조사용
-        System.out.println(member);
+        Order order2 = em.find(Order.class, orderID);
+        Member member2 = order2.getMember();  //주문한 회원, 참조사용
+        System.out.println(member2);
 
-        OrderItem orderItem = order.getOrderItems().get(0);
-        Item item = orderItem.getItem();
+        OrderItem orderItem2 = order2.getOrderItems().get(0);
+        Item item2 = orderItem2.getItem();
 
-        System.out.println(item);
+        System.out.println(item2);
 
     }
 
